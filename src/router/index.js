@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+// 课程模块
+import courseRoutes from "./modules/course";
 const routes = [
   {
     path: "/login",
@@ -13,6 +15,13 @@ const routes = [
     path: "/",
     name: "Home",
     component: () => import("@/views/home/index.vue"),
+  },
+  {
+    path: "/course",
+    name: "Course",
+    component: { render: (h) => h("router-view") },
+    meta: { title: "课程管理" },
+    children: courseRoutes,
   },
 ];
 
