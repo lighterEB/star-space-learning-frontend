@@ -50,7 +50,7 @@
               <i class="el-icon-edit-outline"></i>
               <span>考试管理</span>
             </template>
-            <el-menu-item index="/exam/list">试卷管理</el-menu-item>
+            <el-menu-item index="/exam/paper">试卷管理</el-menu-item>
             <el-menu-item index="/exam/question">题库管理</el-menu-item>
           </el-submenu>
 

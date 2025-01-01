@@ -3,8 +3,11 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-// 课程模块
+// 系统管理
 import systemRoutes from "./modules/system";
+// 考试管理
+import examRoutes from "./modules/exam";
+// 课程模块
 import courseRoutes from "./modules/course";
 const routes = [
   {
@@ -30,6 +33,13 @@ const routes = [
     component: { render: (h) => h("router-view") },
     meta: { title: "课程管理" },
     children: courseRoutes,
+  },
+  {
+    path: "/exam",
+    name: "Exam",
+    component: { render: (h) => h("router-view") },
+    meta: { title: "考试管理" },
+    children: examRoutes,
   },
 ];
 
