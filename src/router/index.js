@@ -9,6 +9,8 @@ import systemRoutes from "./modules/system";
 import examRoutes from "./modules/exam";
 // 课程模块
 import courseRoutes from "./modules/course";
+// 成绩管理模块
+import scoreRoutes from "./modules/score";
 const routes = [
   {
     path: "/login",
@@ -40,6 +42,13 @@ const routes = [
     component: { render: (h) => h("router-view") },
     meta: { title: "考试管理" },
     children: examRoutes,
+  },
+  {
+    path: "/score",
+    name: "Score",
+    component: { render: (h) => h("router-view") },
+    meta: { title: "成绩管理" },
+    children: scoreRoutes,
   },
 ];
 

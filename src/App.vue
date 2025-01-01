@@ -59,6 +59,7 @@
               <i class="el-icon-data-analysis"></i>
               <span>成绩管理</span>
             </template>
+            <el-menu-item index="/score/list">成绩列表</el-menu-item>
             <el-menu-item index="/score/analysis">成绩分析</el-menu-item>
             <el-menu-item index="/score/report">成绩报告</el-menu-item>
           </el-submenu>
