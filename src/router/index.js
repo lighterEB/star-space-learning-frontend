@@ -4,6 +4,7 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 // 课程模块
+import systemRoutes from "./modules/system";
 import courseRoutes from "./modules/course";
 const routes = [
   {
@@ -15,6 +16,13 @@ const routes = [
     path: "/",
     name: "Home",
     component: () => import("@/views/home/index.vue"),
+  },
+  {
+    path: "/system",
+    name: "System",
+    component: { render: (h) => h("router-view") },
+    meta: { title: "系统管理" },
+    children: systemRoutes,
   },
   {
     path: "/course",
